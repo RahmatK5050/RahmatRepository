@@ -32,9 +32,9 @@ public class LogInPageTest extends TestBase {
 	@BeforeTest
 	public void setExtent() {
 		extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/LoginPageTest.html", true);
-		extent.addSystemInfo("Host Name", "User Window");
+		extent.addSystemInfo("Host Name", "User01");
 		extent.addSystemInfo("UserName", "User");
-		extent.addSystemInfo("environment", "Non Federated");
+		extent.addSystemInfo("environment", "Windows");
 		
 	}
 
@@ -63,6 +63,12 @@ public class LogInPageTest extends TestBase {
 		loginpage.EnteringPassword(TestData.Password);
 		extenttest.log(LogStatus.INFO, "Clicking On LogIn Button");
 		loginpage.ClickOnLogInButton();
+		extenttest.log(LogStatus.INFO, "Verifying Username");
+		String Actualname = loginpage.NameGetText();
+		
+		//Enter Your UserName for Verification
+		
+		Assert.assertEquals(Actualname, "Enter Your UserName for Verification");
 		
 	}
 

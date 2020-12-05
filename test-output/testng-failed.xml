@@ -5,11 +5,11 @@
     <classes>
       <class name="com.facebook.testcases.LogInPageTest">
         <methods>
+          <include name="LogInTestForCorrectUserNameAndPassword"/>
           <include name="setup"/>
           <include name="endReport"/>
           <include name="teardown"/>
           <include name="setExtent"/>
-          <include name="LogInTestForWrongUserNameAndWrongPassword"/>
         </methods>
       </class> <!-- com.facebook.testcases.LogInPageTest -->
     </classes>

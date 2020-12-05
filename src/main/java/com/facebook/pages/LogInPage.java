@@ -31,6 +31,9 @@ public class LogInPage extends TestBase {
 
 	@FindBy(xpath="//div[contains(@class,'_9ay7')]")
 	WebElement ErrorMsg;
+	
+	@FindBy(xpath="//html[@id='facebook']/body/div[1]/div/div[1]/div[1]/div[3]/div/div/div[1]//div[@role='navigation']/div/div/div[1]/div/div/div[@class='buofh1pr']/ul/li/div/a[@role='link']/div[1]/div[2]/div")
+	WebElement Name;
 
 	public LogInPage() {
 		PageFactory.initElements(driver, this);
@@ -56,5 +59,10 @@ public class LogInPage extends TestBase {
 	public String ErrorMsgGetText()
 	{
 		return ErrorMsg.getText();
+	}
+	
+	public String NameGetText()
+	{
+		return Name.getText();
 	}
 }
